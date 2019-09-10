@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Counter extends React.Component {
+class Counter extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -18,7 +18,7 @@ class Counter extends React.Component {
 
   onClickInc = () => {
     this.setState((state) => ({ 
-      count: state.count + 1 
+      count: state.count 
     }));
   };
 

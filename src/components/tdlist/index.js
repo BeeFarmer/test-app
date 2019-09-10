@@ -23,6 +23,12 @@ class Tdlist extends React.Component {
     }
   };
 
+  removeItem = (item) => {
+    this.setState((state) => (
+      { list: state.list.filter(el => el !== item) }
+    ));
+  };
+
   render() {
     return (
       <div>
@@ -34,7 +40,7 @@ class Tdlist extends React.Component {
           />
           <button onClick={this.onClickAdd}> Add </button>
         </div>
-        <List items={this.state.list} />
+        <List items={this.state.list} rmHandler={this.removeItem} />
       </div>
     );
   }

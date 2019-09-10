@@ -5,7 +5,12 @@ const List = props => {
     <ul>
     {
       props.items.map((item, index) => (
-        <li key={index}> {item} </li>
+          <li key={index}> 
+            {item} &nbsp;
+            <button className="remove" onClick={props.rmHandler.bind(null, item)}> 
+              x
+            </button>
+          </li>
       ))
     }
     </ul>
