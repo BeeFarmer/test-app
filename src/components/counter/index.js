@@ -3,14 +3,22 @@ import React from 'react';
 class Counter extends React.Component {
   constructor(props) {
     super(props);
+
+    let getLocalCount = localStorage.getItem('_localCount') || 0;
     this.state = {
-      count: 0
+      count: Number(getLocalCount)
     }
   }
 
+  // Enable localStorage to keep the value on page refresh
+  // componentDidUpdate() {
+  //   localStorage.setItem('localCount', this.state.count);
+  //   console.log(localStorage.getItem('_localCount'));
+  // }
+
   onClickInc = () => {
-    this.setState((state) => ({
-      count: state.count + 1
+    this.setState((state) => ({ 
+      count: state.count + 1 
     }));
   };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import List from './list';
 
 class Tdlist extends React.Component {
   constructor(props) {
@@ -15,7 +16,8 @@ class Tdlist extends React.Component {
 
   onClickAdd = () => {
     if (this.state.inp) {
-      this.setState((state) => ({  
+      this.setState((state) => ({
+        inp: "",  
         list: [...state.list, state.inp] 
       }));
     }
@@ -25,12 +27,14 @@ class Tdlist extends React.Component {
     return (
       <div>
         <div>
-          <input type="text" placeholder={'Enter Text...'} onChange={this.onInputChange} />
+          <input 
+            placeholder={'Enter Text...'}
+            onChange={this.onInputChange}
+            value={this.state.inp}
+          />
           <button onClick={this.onClickAdd}> Add </button>
         </div>
-        <ul>
-          { this.state.list.map((item, index) => <li key={index}>{item}</li>) }
-        </ul>
+        <List items={this.state.list} />
       </div>
     );
   }
