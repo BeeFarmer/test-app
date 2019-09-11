@@ -18,7 +18,7 @@ class Counter extends React.PureComponent {
 
   onClickInc = () => {
     this.setState((state) => ({ 
-      count: state.count 
+      count: state.count + 1
     }));
   };
 

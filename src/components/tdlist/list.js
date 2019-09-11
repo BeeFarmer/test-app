@@ -7,7 +7,7 @@ const List = props => {
       props.items.map((item, index) => (
           <li key={index}> 
             {item} &nbsp;
-            <button className="remove" onClick={props.rmHandler.bind(null, item)}> 
+            <button className="remove" onClick={props.rmHandler.bind(null, index)}> 
               x
             </button>
           </li>

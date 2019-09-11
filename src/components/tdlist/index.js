@@ -23,9 +23,10 @@ class Tdlist extends React.Component {
     }
   };
 
-  removeItem = (item) => {
+  removeItem = (index) => {
     this.setState((state) => (
-      { list: state.list.filter(el => el !== item) }
+      // { list: state.list.filter(el => el !== item) }
+      { list: state.list.slice(0, index).concat(state.list.slice(index+1)) }
     ));
   };
 
