@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Counter,
-  Tdlist
+  Tdlist,
+  Prefix
 } from './components';
 
 
@@ -12,6 +13,9 @@ function App() {
 
       <p>To-do List</p>
       <Tdlist />
+
+      <p>Telephone Prefix</p>
+      <Prefix />
     </div>
   );
 }
