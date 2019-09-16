@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Counter,
   Tdlist,
-  Prefix
+  Prefix,
+  Mvlist
 } from './components';
 
 
@@ -16,6 +17,9 @@ function App() {
 
       <p>Telephone Prefix</p>
       <Prefix />
+
+      <p>Movie List</p>
+      <Mvlist />
     </div>
   );
 }

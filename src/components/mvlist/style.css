@@ -1,0 +1,30 @@
+.flex-container {
+  display: flex;
+  background-color: lightgrey;
+  overflow-x: auto;
+  width: 50%;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.flex-container > div {
+  text-align: center;
+  margin: 10px 15px;
+  font: 17px arial, sans-serif;
+}
+
+.row-title {
+  font: italic bold 28px/30px Georgia, serif;
+}
+
+.btn {
+  display: none;
+}
+
+.item-detail:hover {
+  cursor: pointer;
+}
+
+.item-detail:hover .btn, .btn:hover {
+  display: inline-block;
+}
