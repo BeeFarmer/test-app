@@ -3,13 +3,15 @@ import {
   Counter,
   Tdlist,
   Prefix,
-  Mvlist
+  Mvlist,
+  Catalog
 } from './components';
 
 
 function App() {
   return (
     <div>
+    {/*
       <Counter />
 
       <p>To-do List</p>
@@ -20,6 +22,10 @@ function App() {
 
       <p>Movie List</p>
       <Mvlist />
+    */}
+      <p>Catalog Viewer</p>
+      <Catalog />
+
     </div>
   );
 }

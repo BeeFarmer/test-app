@@ -18,7 +18,7 @@
 }
 
 .btn {
-  display: none;
+  visibility: hidden;
 }
 
 .item-detail:hover {
@@ -26,5 +26,20 @@
 }
 
 .item-detail:hover .btn, .btn:hover {
-  display: inline-block;
+  visibility: visible;
+}
+
+.catalog-container {
+
+}
+
+.img-icon {
+  width: 150px;
+  height: 150px;
+  border: 5px solid grey;
+}
+
+.img-detail {
+  width: 300px;
+  height: 300px;
 }
