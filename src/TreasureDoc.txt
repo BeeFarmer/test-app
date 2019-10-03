@@ -1,0 +1,26 @@
+SSR vs CSR
+VDOM
+setState second param
+react-router
+serial async
+
+Promise vs Async/Await
+
+create obj in js
+after setState?
+ISO format
+
+========================================
+
+Shadow DOM is different from Virtual DOM
+Shadow is a browser tech designed for scoping variables and CSS in web components
+
+React Fiber is the new reconciliation engine in React 16 for Incremental Rendering of VDOM
+Incremental Rendering: the ability to split rendering work into chunks and spread it out over multiple frames
+Reconciliation: The algorithm React uses to diff one tree with another to determine which parts need to be changed
+Reconciliation and rendering are separate phases
+
+Workday
+New York Life
+Boeing
+Blizzard Entertainment 
