@@ -1,14 +1,9 @@
 SSR vs CSR
-VDOM
-setState second param
-react-router
-serial async
 
-Promise vs Async/Await
-
-create obj in js
-after setState?
+react-router (withRouter)
 ISO format
+Refs
+
 
 ========================================
 
@@ -20,7 +15,5 @@ Incremental Rendering: the ability to split rendering work into chunks and sprea
 Reconciliation: The algorithm React uses to diff one tree with another to determine which parts need to be changed
 Reconciliation and rendering are separate phases
 
-Workday
-New York Life
-Boeing
-Blizzard Entertainment 
+React one-way data flow
+Angular two-way data flow which makes it difficult to debug
