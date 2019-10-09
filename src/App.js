@@ -23,9 +23,11 @@ function App() {
 
       <p>Movie List</p>
       <Mvlist />
-    */}
+    
       <p>Catalog Viewer</p>
       <Catalog />
+    */}
+    ???
 
     </div>
   );
