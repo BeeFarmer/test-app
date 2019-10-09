@@ -21,6 +21,8 @@ export default class Catalog extends React.Component {
   }
 
   render() {
+    const path = "/img/2.jpg";
+    //<img src={path} className='img-icon' onClick={() => this.onClickChange(2)}/>
     return (
       <div className='catalog-container'>
 
