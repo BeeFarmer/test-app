@@ -1,14 +1,9 @@
 SSR vs CSR
-VDOM
-setState second param
-react-router
-serial async
 
-Promise vs Async/Await
-
-create obj in js
-after setState?
+react-router (withRouter)
 ISO format
+Refs
+
 
 ========================================
 
@@ -22,3 +17,5 @@ Reconciliation and rendering are separate phases
 
 RESTful and SOAP-based
 BrowserRouter HashRouter
+React one-way data flow
+Angular two-way data flow which makes it difficult to debug

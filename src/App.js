@@ -4,7 +4,8 @@ import {
   Tdlist,
   Prefix,
   Mvlist,
-  Catalog
+  Catalog,
+  Stopwatch
 } from './components';
 
 
