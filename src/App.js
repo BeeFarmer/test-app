@@ -7,6 +7,7 @@ import {
   Catalog,
   Stopwatch
 } from './components';
+import { Rcounter } from './components';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <p>Catalog Viewer</p>
       <Catalog />
     */}
-    ???
+    
+    <Rcounter />
 
     </div>
   );

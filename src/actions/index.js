@@ -2,15 +2,15 @@ const incAction = () => {
   return {
     type: 'INCREMENT'
   };
-}
+};
 
 const decAction = () => {
   return {
     type: 'DECREMENT'
   };
-}
+};
 
-export default {
+export {
   incAction,
   decAction
 };
