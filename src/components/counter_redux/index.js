@@ -1,27 +1,30 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { incAction, decAction } from '../../actions';
+import * as myClass from '../../actions';
+//{ incAction, decAction, oddAction, asyncAction }
 
-const Rcounter = ({ value }) => {
+const Rcounter = ({ value, inc, dec, oddInc, asyncInc }) => {
 
   return (
     <div>
       <p>Counter : {value}</p>
-      <button> + </button>
-      <button> - </button>
-      <button> Increment if odd </button>
-      <button> Asyc Increment </button>
+      <button onClick={inc}> + </button>
+      <button onClick={dec}> - </button>
+      <button onClick={oddInc}> Increment if odd </button>
+      <button onClick={asyncInc}> Asyc Increment </button>
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  value: state.value
+  value: state
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  inc: () => dispatch(incAction()),
-  dec: () => dispatch(decAction())
+  inc: () => dispatch(myClass.incAction()),
+  dec: () => dispatch(myClass.decAction()),
+  oddInc: () => dispatch(myClass.oddAction()),
+  asyncInc: () => dispatch(myClass.asyncAction())
 });
 
 export default connect(
