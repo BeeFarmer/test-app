@@ -7,6 +7,7 @@ const Rcounter = ({ value, inc, dec, oddInc, asyncInc }) => {
 
   return (
     <div>
+      {console.log(value)}
       <p>Counter : {value}</p>
       <button onClick={inc}> + </button>
       <button onClick={dec}> - </button>
@@ -17,7 +18,7 @@ const Rcounter = ({ value, inc, dec, oddInc, asyncInc }) => {
 }
 
 const mapStateToProps = (state) => ({
-  value: state
+  value: state.counterReducer
 });
 
 const mapDispatchToProps = (dispatch) => ({

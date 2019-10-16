@@ -7,7 +7,7 @@ import {
   Catalog,
   Stopwatch
 } from './components';
-import { Rcounter } from './components';
+import { Rcounter, Rtdlist } from './components';
 
 
 function App() {
@@ -30,6 +30,9 @@ function App() {
     */}
     
     <Rcounter />
+
+    <p>To-do List in Redux</p>
+    <Rtdlist />
 
     </div>
   );
