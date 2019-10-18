@@ -10,8 +10,6 @@ const Rtdlist = ({ input, list, getInput, emptyInput, addToList, removeFromList 
     e.preventDefault();
   };
 
-  const func = () => {console.log(123);};
-
   return (
     <div>
       <form onSubmit={ e => handleSubmit(e) }>
