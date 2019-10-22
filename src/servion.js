@@ -13,6 +13,7 @@ class App extends React.Component {
       content: INIT_CONTENT,
       sub_index: 0,
       sub_content: {
+        'empty': [],
         0: ["Apple", "Orange"],
         1: ["Spaghetti", "Ravioli"],
       }
@@ -29,18 +30,25 @@ class App extends React.Component {
       // do not add while input is null
       this.setState(state => ({
         input: "",
-        content: [...state.content, state.input]
+        content: [...state.content, state.input],
+        sub_content: {...state.sub_content, [state.content.length]: []}
       }));
     }
   }
 
-  onClickRemove = i => {
+  onClickRemove = (i, e) => {
+    e.stopPropagation();
     const new_sub = {...this.state.sub_content};
-    delete new_sub.i;
+    delete new_sub[i];
     this.setState({
       content: this.state.content.filter((item, index) => index !== i),
+      sub_index: 'empty',
       sub_content: new_sub
     });
+  }
+
+  onClickSelect = i => {
+    this.setState({ sub_index: i });
   }
 
   onClickAddSub = item => {
@@ -65,6 +73,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App" style={container}>
 
@@ -78,11 +87,11 @@ class App extends React.Component {
           <button style={addBtn} onClick={this.onClickAdd}> Add </button>
           <ol>
             {this.state.content.map((item, index) => (
-              <li style={liStyle} key={index}>
+              <li style={liStyle} key={index} onClick={() => this.onClickSelect(index)}>
                 {item}
                 <button
                   style={removeBtn} 
-                  onClick={() => this.onClickRemove(index)}> 
+                  onClick={e => this.onClickRemove(index, e)}> 
                   x
                 </button>
               </li>
