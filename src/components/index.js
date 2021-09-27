@@ -7,3 +7,4 @@ export {default as Stopwatch} from './stopwatch/';
 
 export {default as Rcounter} from './counter_redux/';
 export {default as Rtdlist} from './tdlist_redux/';
+export {default as Rmvlist} from './mvlist_redux/';
